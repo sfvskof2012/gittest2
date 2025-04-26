@@ -1,26 +1,7 @@
-import datetime
-
-def log_power_usage(device_name, power_consumption):
-    """
-    Logs the power usage of a device.
-
-    Args:
-        device_name (str): Name of the device.
-        power_consumption (float): Power consumption in kWh.
-    """
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    log_entry = f"{timestamp}, {device_name}, {power_consumption} kWh\n"
-
-    with open("power_usage_log.txt", "a") as log_file:
-        log_file.write(log_entry)
-
-    print("Power usage logged successfully.")
+def print_triangle(width, height):
+    for i in range(1, height + 1):
+        stars = int((i / height) * width)
+        print('*' * stars)
 
 # Example usage
-if __name__ == "__main__":
-    device = input("Enter device name: ")
-    try:
-        power = float(input("Enter power consumption (kWh): "))
-        log_power_usage(device, power)
-    except ValueError:
-        print("Invalid input. Please enter a numeric value for power consumption.")
+print_triangle(10, 5)
