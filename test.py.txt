@@ -1,7 +1,4 @@
-def print_triangle(width, height):
-    for i in range(1, height + 1):
-        stars = int((i / height) * width)
-        print('*' * stars)
-
-# Example usage
-print_triangle(10, 5)
+# 印出星星的程式碼
+rows = 5
+for i in range(1, rows + 1):
+    print('*' * i)
